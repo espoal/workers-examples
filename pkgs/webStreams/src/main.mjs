@@ -1,4 +1,4 @@
-import { workerStreamFactory } from './workerFactory.mjs'
+import { workerStreamFactory } from '@libs/utils'
 
 const {readable, worker} = workerStreamFactory({
   fileName: await import.meta.resolve('./worker.mjs'),

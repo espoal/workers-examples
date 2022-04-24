@@ -7,14 +7,16 @@ export const baseOptions = {
   entryPoints: ['Error: No entry points'],
   outdir: 'Error: No outdir',
   plugins: [pnpPlugin()],
+  chunkNames: '[name]',
   bundle: true,
-  splitting: false,
+  splitting: true,
   format: 'esm',
   platform: 'node',
   target: 'esnext',
   minify: false,
   treeShaking: true,
   watch: false,
+  outExtension: {'.js': '.mjs'},
   external: [],
 }
 

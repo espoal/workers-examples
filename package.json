@@ -1,5 +1,8 @@
 {
   "name": "workers-examples",
+  "scripts": {
+    "build": "yarn workspaces foreach run build"
+  },
   "workspaces": [
     "pkgs/*",
     "libs/*"

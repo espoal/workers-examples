@@ -1,5 +1,5 @@
 {
-  "name": "@pkgs/webStreams",
+  "name": "@pkgs/bcQueue",
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "build": "node build.mjs",
@@ -7,7 +7,6 @@
     "start": "node dist/main.mjs"
   },
   "dependencies": {
-    "@libs/build": "workspace:^",
-    "@libs/utils": "workspace:^"
+    "@libs/build": "workspace:^"
   }
 }
