@@ -20,6 +20,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pkgs/awaitResponse@workspace:pkgs/awaitResponse":
+  version: 0.0.0-use.local
+  resolution: "@pkgs/awaitResponse@workspace:pkgs/awaitResponse"
+  languageName: unknown
+  linkType: soft
+
 "@pkgs/bcQueue@workspace:pkgs/bcQueue":
   version: 0.0.0-use.local
   resolution: "@pkgs/bcQueue@workspace:pkgs/bcQueue"
@@ -53,6 +59,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pkgs/workerData@workspace:pkgs/workerData":
+  version: 0.0.0-use.local
+  resolution: "@pkgs/workerData@workspace:pkgs/workerData"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@yarnpkg/esbuild-plugin-pnp@npm:^3.0.0-rc.2":
   version: 3.0.0-rc.2
   resolution: "@yarnpkg/esbuild-plugin-pnp@npm:3.0.0-rc.2"
@@ -63,12 +77,6 @@ __metadata:
   checksum: 1c9d6178a9ab79c7039f11c3b41465bef310611dc692d35272d881d568b1b2bedc592b4d08d95eee5d2bb53b01e8245dc214505c98ac392477059523ac681511
   languageName: node
   linkType: hard
-
-"awaitResponse@workspace:pkgs/awaitResponse":
-  version: 0.0.0-use.local
-  resolution: "awaitResponse@workspace:pkgs/awaitResponse"
-  languageName: unknown
-  linkType: soft
 
 "esbuild-android-64@npm:0.14.38":
   version: 0.14.38

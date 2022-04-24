@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:libs/utils"\
       },\
       {\
-        "name": "awaitResponse",\
+        "name": "@pkgs/awaitResponse",\
         "reference": "workspace:pkgs/awaitResponse"\
       },\
       {\
@@ -47,6 +47,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "@pkgs/webStreams",\
         "reference": "workspace:pkgs/webStreams"\
+      },\
+      {\
+        "name": "@pkgs/workerData",\
+        "reference": "workspace:pkgs/workerData"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -54,11 +58,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@libs/build", ["workspace:libs/build"]],\
       ["@libs/utils", ["workspace:libs/utils"]],\
+      ["@pkgs/awaitResponse", ["workspace:pkgs/awaitResponse"]],\
       ["@pkgs/bcQueue", ["workspace:pkgs/bcQueue"]],\
       ["@pkgs/broadcastChannel", ["workspace:pkgs/broadcastChannel"]],\
       ["@pkgs/messaggeChannel", ["workspace:pkgs/messageChannel"]],\
       ["@pkgs/webStreams", ["workspace:pkgs/webStreams"]],\
-      ["awaitResponse", ["workspace:pkgs/awaitResponse"]],\
+      ["@pkgs/workerData", ["workspace:pkgs/workerData"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -88,6 +93,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./libs/utils/",\
           "packageDependencies": [\
             ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@pkgs/awaitResponse", [\
+        ["workspace:pkgs/awaitResponse", {\
+          "packageLocation": "./pkgs/awaitResponse/",\
+          "packageDependencies": [\
+            ["@pkgs/awaitResponse", "workspace:pkgs/awaitResponse"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -133,6 +147,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["@pkgs/workerData", [\
+        ["workspace:pkgs/workerData", {\
+          "packageLocation": "./pkgs/workerData/",\
+          "packageDependencies": [\
+            ["@pkgs/workerData", "workspace:pkgs/workerData"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@yarnpkg/esbuild-plugin-pnp", [\
         ["npm:3.0.0-rc.2", {\
           "packageLocation": "./.yarn/cache/@yarnpkg-esbuild-plugin-pnp-npm-3.0.0-rc.2-30c7cc3dda-1c9d6178a9.zip/node_modules/@yarnpkg/esbuild-plugin-pnp/",\
@@ -154,15 +178,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "esbuild"\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["awaitResponse", [\
-        ["workspace:pkgs/awaitResponse", {\
-          "packageLocation": "./pkgs/awaitResponse/",\
-          "packageDependencies": [\
-            ["awaitResponse", "workspace:pkgs/awaitResponse"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["esbuild", [\

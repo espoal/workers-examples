@@ -1,4 +1,4 @@
 {
-  "name": "awaitResponse",
+  "name": "@pkgs/awaitResponse",
   "packageManager": "yarn@3.2.0"
 }

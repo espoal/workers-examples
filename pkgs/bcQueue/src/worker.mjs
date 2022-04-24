@@ -3,20 +3,13 @@ import { setTimeout } from 'node:timers/promises'
 
 const queue = new BroadcastChannel('queue')
 
-
-//const first = receiveMessageOnPort(queue)
-// console.log({ first })
-
-
-
 parentPort.postMessage('ready')
 
 let count = 0
 while (true) {
   const resp = receiveMessageOnPort(queue)
-  const parent = receiveMessageOnPort(parentPort)
 
-  console.log({resp, parent, count})
+  console.log({resp, count})
 
   count++
   await setTimeout(200)
