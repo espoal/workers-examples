@@ -20,48 +20,56 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pkgs/awaitResponse@workspace:pkgs/awaitResponse":
+"@pkgs/awaitResponse@workspace:samples/basic/awaitResponse":
   version: 0.0.0-use.local
-  resolution: "@pkgs/awaitResponse@workspace:pkgs/awaitResponse"
+  resolution: "@pkgs/awaitResponse@workspace:samples/basic/awaitResponse"
   languageName: unknown
   linkType: soft
 
-"@pkgs/bcQueue@workspace:pkgs/bcQueue":
+"@pkgs/bcQueue@workspace:samples/broadcastChannel/bcQueue":
   version: 0.0.0-use.local
-  resolution: "@pkgs/bcQueue@workspace:pkgs/bcQueue"
+  resolution: "@pkgs/bcQueue@workspace:samples/broadcastChannel/bcQueue"
   dependencies:
     "@libs/build": "workspace:^"
   languageName: unknown
   linkType: soft
 
-"@pkgs/broadcastChannel@workspace:pkgs/broadcastChannel":
+"@pkgs/broadcastChannel@workspace:samples/broadcastChannel/broadcastChannel":
   version: 0.0.0-use.local
-  resolution: "@pkgs/broadcastChannel@workspace:pkgs/broadcastChannel"
+  resolution: "@pkgs/broadcastChannel@workspace:samples/broadcastChannel/broadcastChannel"
   dependencies:
     "@libs/build": "workspace:^"
   languageName: unknown
   linkType: soft
 
-"@pkgs/messaggeChannel@workspace:pkgs/messageChannel":
+"@pkgs/messaggeChannel@workspace:samples/messageChannel/messageChannel":
   version: 0.0.0-use.local
-  resolution: "@pkgs/messaggeChannel@workspace:pkgs/messageChannel"
+  resolution: "@pkgs/messaggeChannel@workspace:samples/messageChannel/messageChannel"
   dependencies:
     "@libs/build": "workspace:^"
   languageName: unknown
   linkType: soft
 
-"@pkgs/webStreams@workspace:pkgs/webStreams":
+"@pkgs/webStreams@workspace:samples/streams/webStreams":
   version: 0.0.0-use.local
-  resolution: "@pkgs/webStreams@workspace:pkgs/webStreams"
+  resolution: "@pkgs/webStreams@workspace:samples/streams/webStreams"
   dependencies:
     "@libs/build": "workspace:^"
     "@libs/utils": "workspace:^"
   languageName: unknown
   linkType: soft
 
-"@pkgs/workerData@workspace:pkgs/workerData":
+"@pkgs/workerData@workspace:samples/basic/workerData":
   version: 0.0.0-use.local
-  resolution: "@pkgs/workerData@workspace:pkgs/workerData"
+  resolution: "@pkgs/workerData@workspace:samples/basic/workerData"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/streamQueue@workspace:samples/streams/streamQueue":
+  version: 0.0.0-use.local
+  resolution: "@samples/streamQueue@workspace:samples/streams/streamQueue"
   dependencies:
     "@libs/utils": "workspace:^"
   languageName: unknown

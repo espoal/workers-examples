@@ -30,27 +30,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       },\
       {\
         "name": "@pkgs/awaitResponse",\
-        "reference": "workspace:pkgs/awaitResponse"\
-      },\
-      {\
-        "name": "@pkgs/bcQueue",\
-        "reference": "workspace:pkgs/bcQueue"\
-      },\
-      {\
-        "name": "@pkgs/broadcastChannel",\
-        "reference": "workspace:pkgs/broadcastChannel"\
-      },\
-      {\
-        "name": "@pkgs/messaggeChannel",\
-        "reference": "workspace:pkgs/messageChannel"\
-      },\
-      {\
-        "name": "@pkgs/webStreams",\
-        "reference": "workspace:pkgs/webStreams"\
+        "reference": "workspace:samples/basic/awaitResponse"\
       },\
       {\
         "name": "@pkgs/workerData",\
-        "reference": "workspace:pkgs/workerData"\
+        "reference": "workspace:samples/basic/workerData"\
+      },\
+      {\
+        "name": "@pkgs/bcQueue",\
+        "reference": "workspace:samples/broadcastChannel/bcQueue"\
+      },\
+      {\
+        "name": "@pkgs/broadcastChannel",\
+        "reference": "workspace:samples/broadcastChannel/broadcastChannel"\
+      },\
+      {\
+        "name": "@pkgs/messaggeChannel",\
+        "reference": "workspace:samples/messageChannel/messageChannel"\
+      },\
+      {\
+        "name": "@samples/streamQueue",\
+        "reference": "workspace:samples/streams/streamQueue"\
+      },\
+      {\
+        "name": "@pkgs/webStreams",\
+        "reference": "workspace:samples/streams/webStreams"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -58,12 +62,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@libs/build", ["workspace:libs/build"]],\
       ["@libs/utils", ["workspace:libs/utils"]],\
-      ["@pkgs/awaitResponse", ["workspace:pkgs/awaitResponse"]],\
-      ["@pkgs/bcQueue", ["workspace:pkgs/bcQueue"]],\
-      ["@pkgs/broadcastChannel", ["workspace:pkgs/broadcastChannel"]],\
-      ["@pkgs/messaggeChannel", ["workspace:pkgs/messageChannel"]],\
-      ["@pkgs/webStreams", ["workspace:pkgs/webStreams"]],\
-      ["@pkgs/workerData", ["workspace:pkgs/workerData"]],\
+      ["@pkgs/awaitResponse", ["workspace:samples/basic/awaitResponse"]],\
+      ["@pkgs/bcQueue", ["workspace:samples/broadcastChannel/bcQueue"]],\
+      ["@pkgs/broadcastChannel", ["workspace:samples/broadcastChannel/broadcastChannel"]],\
+      ["@pkgs/messaggeChannel", ["workspace:samples/messageChannel/messageChannel"]],\
+      ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
+      ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
+      ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -98,49 +103,49 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@pkgs/awaitResponse", [\
-        ["workspace:pkgs/awaitResponse", {\
-          "packageLocation": "./pkgs/awaitResponse/",\
+        ["workspace:samples/basic/awaitResponse", {\
+          "packageLocation": "./samples/basic/awaitResponse/",\
           "packageDependencies": [\
-            ["@pkgs/awaitResponse", "workspace:pkgs/awaitResponse"]\
+            ["@pkgs/awaitResponse", "workspace:samples/basic/awaitResponse"]\
           ],\
           "linkType": "SOFT"\
         }]\
       ]],\
       ["@pkgs/bcQueue", [\
-        ["workspace:pkgs/bcQueue", {\
-          "packageLocation": "./pkgs/bcQueue/",\
+        ["workspace:samples/broadcastChannel/bcQueue", {\
+          "packageLocation": "./samples/broadcastChannel/bcQueue/",\
           "packageDependencies": [\
-            ["@pkgs/bcQueue", "workspace:pkgs/bcQueue"],\
+            ["@pkgs/bcQueue", "workspace:samples/broadcastChannel/bcQueue"],\
             ["@libs/build", "workspace:libs/build"]\
           ],\
           "linkType": "SOFT"\
         }]\
       ]],\
       ["@pkgs/broadcastChannel", [\
-        ["workspace:pkgs/broadcastChannel", {\
-          "packageLocation": "./pkgs/broadcastChannel/",\
+        ["workspace:samples/broadcastChannel/broadcastChannel", {\
+          "packageLocation": "./samples/broadcastChannel/broadcastChannel/",\
           "packageDependencies": [\
-            ["@pkgs/broadcastChannel", "workspace:pkgs/broadcastChannel"],\
+            ["@pkgs/broadcastChannel", "workspace:samples/broadcastChannel/broadcastChannel"],\
             ["@libs/build", "workspace:libs/build"]\
           ],\
           "linkType": "SOFT"\
         }]\
       ]],\
       ["@pkgs/messaggeChannel", [\
-        ["workspace:pkgs/messageChannel", {\
-          "packageLocation": "./pkgs/messageChannel/",\
+        ["workspace:samples/messageChannel/messageChannel", {\
+          "packageLocation": "./samples/messageChannel/messageChannel/",\
           "packageDependencies": [\
-            ["@pkgs/messaggeChannel", "workspace:pkgs/messageChannel"],\
+            ["@pkgs/messaggeChannel", "workspace:samples/messageChannel/messageChannel"],\
             ["@libs/build", "workspace:libs/build"]\
           ],\
           "linkType": "SOFT"\
         }]\
       ]],\
       ["@pkgs/webStreams", [\
-        ["workspace:pkgs/webStreams", {\
-          "packageLocation": "./pkgs/webStreams/",\
+        ["workspace:samples/streams/webStreams", {\
+          "packageLocation": "./samples/streams/webStreams/",\
           "packageDependencies": [\
-            ["@pkgs/webStreams", "workspace:pkgs/webStreams"],\
+            ["@pkgs/webStreams", "workspace:samples/streams/webStreams"],\
             ["@libs/build", "workspace:libs/build"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
@@ -148,10 +153,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@pkgs/workerData", [\
-        ["workspace:pkgs/workerData", {\
-          "packageLocation": "./pkgs/workerData/",\
+        ["workspace:samples/basic/workerData", {\
+          "packageLocation": "./samples/basic/workerData/",\
           "packageDependencies": [\
-            ["@pkgs/workerData", "workspace:pkgs/workerData"],\
+            ["@pkgs/workerData", "workspace:samples/basic/workerData"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/streamQueue", [\
+        ["workspace:samples/streams/streamQueue", {\
+          "packageLocation": "./samples/streams/streamQueue/",\
+          "packageDependencies": [\
+            ["@samples/streamQueue", "workspace:samples/streams/streamQueue"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\
