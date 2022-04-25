@@ -20,9 +20,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pkgs/awaitResponse@workspace:samples/basic/awaitResponse":
+"@pkgs/awaitResponse@workspace:samples/postMessage/awaitResponse":
   version: 0.0.0-use.local
-  resolution: "@pkgs/awaitResponse@workspace:samples/basic/awaitResponse"
+  resolution: "@pkgs/awaitResponse@workspace:samples/postMessage/awaitResponse"
   languageName: unknown
   linkType: soft
 
@@ -62,6 +62,14 @@ __metadata:
 "@pkgs/workerData@workspace:samples/basic/workerData":
   version: 0.0.0-use.local
   resolution: "@pkgs/workerData@workspace:samples/basic/workerData"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/postQueue@workspace:samples/postMessage/postQueue":
+  version: 0.0.0-use.local
+  resolution: "@samples/postQueue@workspace:samples/postMessage/postQueue"
   dependencies:
     "@libs/utils": "workspace:^"
   languageName: unknown

@@ -9,7 +9,7 @@ const writer = await writable.getWriter()
 await writer.write(4)
 
 const readable = new ReadableStream({
-  
+
 })
 
 

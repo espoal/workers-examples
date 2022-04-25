@@ -29,10 +29,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:libs/utils"\
       },\
       {\
-        "name": "@pkgs/awaitResponse",\
-        "reference": "workspace:samples/basic/awaitResponse"\
-      },\
-      {\
         "name": "@pkgs/workerData",\
         "reference": "workspace:samples/basic/workerData"\
       },\
@@ -49,6 +45,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/messageChannel/messageChannel"\
       },\
       {\
+        "name": "@pkgs/awaitResponse",\
+        "reference": "workspace:samples/postMessage/awaitResponse"\
+      },\
+      {\
+        "name": "@samples/postQueue",\
+        "reference": "workspace:samples/postMessage/postQueue"\
+      },\
+      {\
         "name": "@samples/streamQueue",\
         "reference": "workspace:samples/streams/streamQueue"\
       },\
@@ -62,12 +66,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@libs/build", ["workspace:libs/build"]],\
       ["@libs/utils", ["workspace:libs/utils"]],\
-      ["@pkgs/awaitResponse", ["workspace:samples/basic/awaitResponse"]],\
+      ["@pkgs/awaitResponse", ["workspace:samples/postMessage/awaitResponse"]],\
       ["@pkgs/bcQueue", ["workspace:samples/broadcastChannel/bcQueue"]],\
       ["@pkgs/broadcastChannel", ["workspace:samples/broadcastChannel/broadcastChannel"]],\
       ["@pkgs/messaggeChannel", ["workspace:samples/messageChannel/messageChannel"]],\
       ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
       ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
+      ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
       ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
@@ -103,10 +108,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@pkgs/awaitResponse", [\
-        ["workspace:samples/basic/awaitResponse", {\
-          "packageLocation": "./samples/basic/awaitResponse/",\
+        ["workspace:samples/postMessage/awaitResponse", {\
+          "packageLocation": "./samples/postMessage/awaitResponse/",\
           "packageDependencies": [\
-            ["@pkgs/awaitResponse", "workspace:samples/basic/awaitResponse"]\
+            ["@pkgs/awaitResponse", "workspace:samples/postMessage/awaitResponse"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -157,6 +162,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./samples/basic/workerData/",\
           "packageDependencies": [\
             ["@pkgs/workerData", "workspace:samples/basic/workerData"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/postQueue", [\
+        ["workspace:samples/postMessage/postQueue", {\
+          "packageLocation": "./samples/postMessage/postQueue/",\
+          "packageDependencies": [\
+            ["@samples/postQueue", "workspace:samples/postMessage/postQueue"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

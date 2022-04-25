@@ -5,7 +5,6 @@ const request = (req) =>
   new Promise(res => {
     parentPort.postMessage(req)
     parentPort.on('message', msg => res(msg))
-
   })
 
 
