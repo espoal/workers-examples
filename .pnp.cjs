@@ -45,12 +45,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/messageChannel/messageChannel"\
       },\
       {\
+        "name": "@samples/mc-readableQueue",\
+        "reference": "workspace:samples/messageChannel/readableQueue"\
+      },\
+      {\
         "name": "@pkgs/awaitResponse",\
         "reference": "workspace:samples/postMessage/awaitResponse"\
       },\
       {\
         "name": "@samples/postQueue",\
         "reference": "workspace:samples/postMessage/postQueue"\
+      },\
+      {\
+        "name": "@samples/pm-readableQueue",\
+        "reference": "workspace:samples/postMessage/readableQueue"\
+      },\
+      {\
+        "name": "@samples/queue",\
+        "reference": "workspace:samples/streams/queue"\
+      },\
+      {\
+        "name": "@samples/sharedArray",\
+        "reference": "workspace:samples/streams/sharedArray"\
       },\
       {\
         "name": "@samples/streamQueue",\
@@ -72,7 +88,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@pkgs/messaggeChannel", ["workspace:samples/messageChannel/messageChannel"]],\
       ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
       ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
+      ["@samples/mc-readableQueue", ["workspace:samples/messageChannel/readableQueue"]],\
+      ["@samples/pm-readableQueue", ["workspace:samples/postMessage/readableQueue"]],\
       ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
+      ["@samples/queue", ["workspace:samples/streams/queue"]],\
+      ["@samples/sharedArray", ["workspace:samples/streams/sharedArray"]],\
       ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
@@ -167,11 +187,51 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["@samples/mc-readableQueue", [\
+        ["workspace:samples/messageChannel/readableQueue", {\
+          "packageLocation": "./samples/messageChannel/readableQueue/",\
+          "packageDependencies": [\
+            ["@samples/mc-readableQueue", "workspace:samples/messageChannel/readableQueue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/pm-readableQueue", [\
+        ["workspace:samples/postMessage/readableQueue", {\
+          "packageLocation": "./samples/postMessage/readableQueue/",\
+          "packageDependencies": [\
+            ["@samples/pm-readableQueue", "workspace:samples/postMessage/readableQueue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@samples/postQueue", [\
         ["workspace:samples/postMessage/postQueue", {\
           "packageLocation": "./samples/postMessage/postQueue/",\
           "packageDependencies": [\
             ["@samples/postQueue", "workspace:samples/postMessage/postQueue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/queue", [\
+        ["workspace:samples/streams/queue", {\
+          "packageLocation": "./samples/streams/queue/",\
+          "packageDependencies": [\
+            ["@samples/queue", "workspace:samples/streams/queue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/sharedArray", [\
+        ["workspace:samples/streams/sharedArray", {\
+          "packageLocation": "./samples/streams/sharedArray/",\
+          "packageDependencies": [\
+            ["@samples/sharedArray", "workspace:samples/streams/sharedArray"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

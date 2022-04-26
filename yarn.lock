@@ -67,9 +67,41 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@samples/mc-readableQueue@workspace:samples/messageChannel/readableQueue":
+  version: 0.0.0-use.local
+  resolution: "@samples/mc-readableQueue@workspace:samples/messageChannel/readableQueue"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/pm-readableQueue@workspace:samples/postMessage/readableQueue":
+  version: 0.0.0-use.local
+  resolution: "@samples/pm-readableQueue@workspace:samples/postMessage/readableQueue"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@samples/postQueue@workspace:samples/postMessage/postQueue":
   version: 0.0.0-use.local
   resolution: "@samples/postQueue@workspace:samples/postMessage/postQueue"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/queue@workspace:samples/streams/queue":
+  version: 0.0.0-use.local
+  resolution: "@samples/queue@workspace:samples/streams/queue"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/sharedArray@workspace:samples/streams/sharedArray":
+  version: 0.0.0-use.local
+  resolution: "@samples/sharedArray@workspace:samples/streams/sharedArray"
   dependencies:
     "@libs/utils": "workspace:^"
   languageName: unknown
