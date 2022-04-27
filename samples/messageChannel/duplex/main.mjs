@@ -12,6 +12,7 @@ const workersPool = workersFactory({
 })
 
 // Create Scheduler
+// TODO: pass scheduler port here
 const scheduler = await schedulerFactory({
   workersPool
 })

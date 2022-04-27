@@ -14,12 +14,7 @@ export const consumerFactory = async ({}) => {
     }
   })
 
-  const workerSchedulerWriter = new WritableStream({
-    start(controller) {},
-    async write(chunk, controller) {}
-  })
-
-  const writer = await workerSchedulerWriter.getWriter()
+  // TODO: Switch to decorated iterator
 
   const pull = async () => {
     schedulerPort.postMessage({ done: false })
