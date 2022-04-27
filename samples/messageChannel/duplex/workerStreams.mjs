@@ -9,14 +9,14 @@ export class WorkSourceStream {
     this.port.onmessage = (wmsg) => {
       debugger
       const { data } = wmsg
-      console.log({ data })
       const { value, done } = data
-      console.log({ value, done })
+      // console.log({ value, done })
 
 
       if (done) {
         controller.close()
-        this.port.close()
+        this.port.postMessage({done: true})
+        // this.port.close()
       }
       else controller.enqueue({value, done})
 
@@ -24,7 +24,7 @@ export class WorkSourceStream {
     this.port.onmessageerror = err => console.log({err})
   }
   async cancel(reason) {
-    await this.port.close()
+    // await this.port.close()
   }
 }
 

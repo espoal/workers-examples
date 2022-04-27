@@ -2,20 +2,37 @@
 
 export class WorkerRequestsStream {
   ports = []
+  disabledPorts = 0
   constructor (ports) {
     this.ports = ports
   }
   start(controller) {
     console.log('[WorkerRequestsStream start]')
     for (const port of this.ports) {
-      port.onmessage = msg => controller.enqueue(msg)
+      port.onmessage = msg => {
+        if (msg.data.done) {
+          port.close()
+          this.disablePort(controller)
+        }
+        else controller.enqueue(msg)
+      }
       port.onmessageerror = err => console.log({ err })
     }
   }
-  async cancel(reason) {
-    for (const port of this.ports) {
-      await port.close()
+  disablePort(controller) {
+    this.disabledPorts++
+    if (this.disabledPorts === this.ports.length) {
+      controller.close()
+      this.cancel('done')
     }
+
+
+  }
+  cancel(reason) {
+    console.log('canceling: ' + reason)
+    /*for (const port of this.ports) {
+      await port.close()
+    }*/
   }
 }
 

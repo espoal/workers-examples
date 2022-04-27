@@ -4,6 +4,8 @@ import {
   WorkerResponseStream
 } from './streams.mjs'
 import { WorkSourceStream } from './workSource.mjs'
+import { writeFile } from 'node:fs/promises'
+
 
 console.log('Main Start!')
 
@@ -32,4 +34,4 @@ for await (const req of workerRequestsStream) {
 
 console.log('Main Done!')
 
-
+await writeFile('./done', 'Im Done')
