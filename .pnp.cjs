@@ -41,12 +41,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/broadcastChannel/broadcastChannel"\
       },\
       {\
+        "name": "@samples/duplex",\
+        "reference": "workspace:samples/messageChannel/duplex"\
+      },\
+      {\
         "name": "@pkgs/messaggeChannel",\
         "reference": "workspace:samples/messageChannel/messageChannel"\
       },\
       {\
         "name": "@samples/mc-readableQueue",\
         "reference": "workspace:samples/messageChannel/readableQueue"\
+      },\
+      {\
+        "name": "@samples/transformQueue",\
+        "reference": "workspace:samples/messageChannel/transformQueue"\
+      },\
+      {\
+        "name": "@samples/infiniteQueue",\
+        "reference": "workspace:samples/messageChannel/writableQueue"\
       },\
       {\
         "name": "@pkgs/awaitResponse",\
@@ -88,12 +100,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@pkgs/messaggeChannel", ["workspace:samples/messageChannel/messageChannel"]],\
       ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
       ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
+      ["@samples/duplex", ["workspace:samples/messageChannel/duplex"]],\
+      ["@samples/infiniteQueue", ["workspace:samples/messageChannel/writableQueue"]],\
       ["@samples/mc-readableQueue", ["workspace:samples/messageChannel/readableQueue"]],\
       ["@samples/pm-readableQueue", ["workspace:samples/postMessage/readableQueue"]],\
       ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
       ["@samples/queue", ["workspace:samples/streams/queue"]],\
       ["@samples/sharedArray", ["workspace:samples/streams/sharedArray"]],\
       ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
+      ["@samples/transformQueue", ["workspace:samples/messageChannel/transformQueue"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -187,6 +202,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
+      ["@samples/duplex", [\
+        ["workspace:samples/messageChannel/duplex", {\
+          "packageLocation": "./samples/messageChannel/duplex/",\
+          "packageDependencies": [\
+            ["@samples/duplex", "workspace:samples/messageChannel/duplex"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/infiniteQueue", [\
+        ["workspace:samples/messageChannel/writableQueue", {\
+          "packageLocation": "./samples/messageChannel/writableQueue/",\
+          "packageDependencies": [\
+            ["@samples/infiniteQueue", "workspace:samples/messageChannel/writableQueue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@samples/mc-readableQueue", [\
         ["workspace:samples/messageChannel/readableQueue", {\
           "packageLocation": "./samples/messageChannel/readableQueue/",\
@@ -242,6 +277,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./samples/streams/streamQueue/",\
           "packageDependencies": [\
             ["@samples/streamQueue", "workspace:samples/streams/streamQueue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/transformQueue", [\
+        ["workspace:samples/messageChannel/transformQueue", {\
+          "packageLocation": "./samples/messageChannel/transformQueue/",\
+          "packageDependencies": [\
+            ["@samples/transformQueue", "workspace:samples/messageChannel/transformQueue"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

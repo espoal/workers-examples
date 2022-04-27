@@ -67,6 +67,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@samples/duplex@workspace:samples/messageChannel/duplex":
+  version: 0.0.0-use.local
+  resolution: "@samples/duplex@workspace:samples/messageChannel/duplex"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue":
+  version: 0.0.0-use.local
+  resolution: "@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@samples/mc-readableQueue@workspace:samples/messageChannel/readableQueue":
   version: 0.0.0-use.local
   resolution: "@samples/mc-readableQueue@workspace:samples/messageChannel/readableQueue"
@@ -110,6 +126,14 @@ __metadata:
 "@samples/streamQueue@workspace:samples/streams/streamQueue":
   version: 0.0.0-use.local
   resolution: "@samples/streamQueue@workspace:samples/streams/streamQueue"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@samples/transformQueue@workspace:samples/messageChannel/transformQueue":
+  version: 0.0.0-use.local
+  resolution: "@samples/transformQueue@workspace:samples/messageChannel/transformQueue"
   dependencies:
     "@libs/utils": "workspace:^"
   languageName: unknown

@@ -22,17 +22,25 @@ const queueStream = new ReadableStream({
     const resp = await request({
       type: 'workChunk',
     })
-    if (resp === undefined) controller.close()
+    if (resp === undefined) {
+      controller.close()
+      queuePort.close()
+    }
     else controller.enqueue(resp)
   },
 
   cancel(reason) {
+    console.log({ reason })
     queuePort.close()
   },
+  close( ) {
+    queuePort.close()
+  }
 })
 
 
 let iters = 0
+
 
 for await (const chunk of queueStream) {
   iters++
@@ -42,8 +50,8 @@ for await (const chunk of queueStream) {
 
 console.log('Worker Done!')
 
+
 console.log({ queueStream })
 
-queueStream.cancel('')
+debugger
 
-queuePort.close()

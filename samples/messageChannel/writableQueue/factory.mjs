@@ -11,12 +11,10 @@ export const promiseFactory = ({fileName, workerData} ) => {
   })), worker]
 }
 
-export const workersFactory = ({fileName, workerData, concurrency, handler} ) => {
+export const workersFactory = ({fileName, workerData, concurrency} ) => {
   const workers = []
   const workersPromises = []
   const workersPorts = []
-
-
 
   for (let i = 0; i<concurrency; i++) {
     const [ workerPromise, worker ] = promiseFactory({
@@ -25,10 +23,7 @@ export const workersFactory = ({fileName, workerData, concurrency, handler} ) =>
     const { port1, port2 } = new MessageChannel()
     workersPromises.push(workerPromise)
     workersPorts.push(port1)
-    port1.onmessage = msg => {
-      // console.log({ msg })
-      port1.postMessage(handler())
-    }
+
     worker.postMessage(port2, [port2])
     workers.push(worker)
   }

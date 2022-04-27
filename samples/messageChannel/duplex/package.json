@@ -1,0 +1,7 @@
+{
+  "name": "@samples/duplex",
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "@libs/utils": "workspace:^"
+  }
+}
