@@ -16,10 +16,7 @@ export const consumerFactory = async ({}) => {
 
   const workerSchedulerWriter = new WritableStream({
     start(controller) {},
-    async write(chunk, controller) {
-
-    }
-
+    async write(chunk, controller) {}
   })
 
   const writer = await workerSchedulerWriter.getWriter()
