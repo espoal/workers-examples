@@ -1,31 +1,22 @@
-import { parentPort, receiveMessageOnPort, threadId } from 'node:worker_threads'
+import {
+  threadId
+} from 'node:worker_threads'
 import { setTimeout } from 'node:timers/promises'
-import { ReadableStream } from 'node:stream/web'
-import { WorkRequestStream, WorkSourceStream } from './workerStreams.mjs'
-import { randomUUID } from 'node:crypto'
+import { consumerFactory } from './queue/consumer.mjs'
 
-console.log('Worker Start!')
-debugger
+console.log(`Worker ${threadId} start!`)
 
-const {message: queuePort} = receiveMessageOnPort(parentPort)
+// Start consumer
+const { workerSchedulerReader, pull, end } = await consumerFactory({})
 
-debugger
-
-// const id = randomUUID()
-
-const workSourceStream = new ReadableStream(new WorkSourceStream(queuePort))
-const workRequestStream = new WritableStream(new WorkRequestStream(queuePort))
-const workRequestWriter = await workRequestStream.getWriter()
-
-queuePort.postMessage(threadId)
-for await (const workUnit of workSourceStream ) {
-  const { value, done } = workUnit
-  console.log({ value, done, threadId })
-  await setTimeout(100)
-  await workRequestWriter.write(threadId)
+// Consumer cycle
+for await (const workUnit of workerSchedulerReader) {
+  console.log({ threadId, workUnit })
+  await setTimeout(200)
+  await pull()
 }
 
+console.log(`Worker ${threadId} done!`)
 
-console.log('Worker done!')
-
-
+// Signal end
+await end()

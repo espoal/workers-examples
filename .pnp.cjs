@@ -45,6 +45,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/messageChannel/duplex"\
       },\
       {\
+        "name": "@samples/duplex_old",\
+        "reference": "workspace:samples/messageChannel/duplex_old"\
+      },\
+      {\
         "name": "@pkgs/messaggeChannel",\
         "reference": "workspace:samples/messageChannel/messageChannel"\
       },\
@@ -101,6 +105,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
       ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
       ["@samples/duplex", ["workspace:samples/messageChannel/duplex"]],\
+      ["@samples/duplex_old", ["workspace:samples/messageChannel/duplex_old"]],\
       ["@samples/infiniteQueue", ["workspace:samples/messageChannel/writableQueue"]],\
       ["@samples/mc-readableQueue", ["workspace:samples/messageChannel/readableQueue"]],\
       ["@samples/pm-readableQueue", ["workspace:samples/postMessage/readableQueue"]],\
@@ -207,6 +212,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./samples/messageChannel/duplex/",\
           "packageDependencies": [\
             ["@samples/duplex", "workspace:samples/messageChannel/duplex"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/duplex_old", [\
+        ["workspace:samples/messageChannel/duplex_old", {\
+          "packageLocation": "./samples/messageChannel/duplex_old/",\
+          "packageDependencies": [\
+            ["@samples/duplex_old", "workspace:samples/messageChannel/duplex_old"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

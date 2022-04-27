@@ -1,37 +1,34 @@
-import { workersFactory } from './factory.mjs'
-import {
-  WorkerRequestsStream,
-  WorkerResponseStream
-} from './streams.mjs'
-import { WorkSourceStream } from './workSource.mjs'
-import { writeFile } from 'node:fs/promises'
+import { workersFactory } from './utils/factory.mjs'
+import { schedulerFactory } from './queue/scheduler.mjs'
+import { sourceFactory } from './utils/workSource.mjs'
 
+console.log('Main start!')
 
-console.log('Main Start!')
-
-const [workersPromise, workerPorts, workers] = workersFactory({
+// Create Workers
+const workersPool = workersFactory({
   fileName: './worker.mjs',
   workerData: {},
   concurrency: 2
 })
 
-const workerRequestsStream = new ReadableStream(new WorkerRequestsStream(workerPorts))
-const workSourceStream = new ReadableStream(new WorkSourceStream(100, 3))
-const workSourceStreamReader = await workSourceStream.getReader()
+// Create Scheduler
+const scheduler = await schedulerFactory({
+  workersPool
+})
+// const queue = await scheduler.start()
 
-const workerResponseStream = new WritableStream(new WorkerResponseStream(workerPorts))
-const workerResponseStreamWriter = await workerResponseStream.getWriter()
+// Start work source
+const { reader: workSource } = await sourceFactory({
+  delay: 100,
+  maxIters: 5
+})
 
-for await (const req of workerRequestsStream) {
-  const { data } = req
-  const workUnit = await workSourceStreamReader.read()
-
-  await workerResponseStreamWriter.write({ workerPort: data, ...workUnit })
-
+// Scheduler cycle
+for await (const { port } of scheduler) {
+  const task = await workSource.read()
+  // TODO: don't deal with port directly
+  await port.postMessage(task)
 }
 
-// TODO: workerRequestStream should terminate
 
-console.log('Main Done!')
-
-await writeFile('./done', 'Im Done')
+console.log('Main done!')

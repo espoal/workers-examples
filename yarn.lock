@@ -75,6 +75,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@samples/duplex_old@workspace:samples/messageChannel/duplex_old":
+  version: 0.0.0-use.local
+  resolution: "@samples/duplex_old@workspace:samples/messageChannel/duplex_old"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue":
   version: 0.0.0-use.local
   resolution: "@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue"
