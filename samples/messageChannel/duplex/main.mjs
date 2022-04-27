@@ -28,6 +28,7 @@ for await (const req of workerRequestsStream) {
 
 }
 
+// TODO: workerRequestStream should terminate
 
 console.log('Main Done!')
 
