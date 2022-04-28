@@ -45,8 +45,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/messageChannel/duplex"\
       },\
       {\
-        "name": "@samples/duplex_old",\
-        "reference": "workspace:samples/messageChannel/duplex_old"\
+        "name": "@samples/iterator",\
+        "reference": "workspace:samples/messageChannel/iterator"\
       },\
       {\
         "name": "@pkgs/messaggeChannel",\
@@ -105,8 +105,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
       ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
       ["@samples/duplex", ["workspace:samples/messageChannel/duplex"]],\
-      ["@samples/duplex_old", ["workspace:samples/messageChannel/duplex_old"]],\
       ["@samples/infiniteQueue", ["workspace:samples/messageChannel/writableQueue"]],\
+      ["@samples/iterator", ["workspace:samples/messageChannel/iterator"]],\
       ["@samples/mc-readableQueue", ["workspace:samples/messageChannel/readableQueue"]],\
       ["@samples/pm-readableQueue", ["workspace:samples/postMessage/readableQueue"]],\
       ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
@@ -217,21 +217,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
-      ["@samples/duplex_old", [\
-        ["workspace:samples/messageChannel/duplex_old", {\
-          "packageLocation": "./samples/messageChannel/duplex_old/",\
-          "packageDependencies": [\
-            ["@samples/duplex_old", "workspace:samples/messageChannel/duplex_old"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["@samples/infiniteQueue", [\
         ["workspace:samples/messageChannel/writableQueue", {\
           "packageLocation": "./samples/messageChannel/writableQueue/",\
           "packageDependencies": [\
             ["@samples/infiniteQueue", "workspace:samples/messageChannel/writableQueue"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/iterator", [\
+        ["workspace:samples/messageChannel/iterator", {\
+          "packageLocation": "./samples/messageChannel/iterator/",\
+          "packageDependencies": [\
+            ["@samples/iterator", "workspace:samples/messageChannel/iterator"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

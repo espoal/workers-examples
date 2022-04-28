@@ -75,17 +75,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@samples/duplex_old@workspace:samples/messageChannel/duplex_old":
+"@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue":
   version: 0.0.0-use.local
-  resolution: "@samples/duplex_old@workspace:samples/messageChannel/duplex_old"
+  resolution: "@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue"
   dependencies:
     "@libs/utils": "workspace:^"
   languageName: unknown
   linkType: soft
 
-"@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue":
+"@samples/iterator@workspace:samples/messageChannel/iterator":
   version: 0.0.0-use.local
-  resolution: "@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue"
+  resolution: "@samples/iterator@workspace:samples/messageChannel/iterator"
   dependencies:
     "@libs/utils": "workspace:^"
   languageName: unknown

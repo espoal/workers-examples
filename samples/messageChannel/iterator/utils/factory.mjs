@@ -16,9 +16,9 @@ export const workersFactory = ({fileName, workerData, concurrency} ) => {
   const workersPromises = []
   const workersPorts = []
 
-  for (let i = 0; i<concurrency; i++) {
+  for (let workerId = 0; workerId<concurrency; workerId++) {
     const [ workerPromise, worker ] = promiseFactory({
-      fileName, workerData: { chunk: i, concurrency, ...workerData}
+      fileName, workerData: { workerId, concurrency, ...workerData}
     })
     const { port1, port2 } = new MessageChannel()
     workersPromises.push(workerPromise)
@@ -28,6 +28,8 @@ export const workersFactory = ({fileName, workerData, concurrency} ) => {
     workers.push(worker)
   }
 
+  const workersPromise = Promise.all(workersPromises)
 
-  return [ Promise.all(workersPromises), workersPorts, workers ]
+
+  return { workersPromise, workersPorts, workers }
 }
