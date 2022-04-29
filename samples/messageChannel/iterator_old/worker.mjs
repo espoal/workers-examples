@@ -2,21 +2,22 @@ import {
   threadId
 } from 'node:worker_threads'
 import { setTimeout } from 'node:timers/promises'
-import { QueueConsumer } from './src/QueueConsumer.mjs'
+import { ConsumerIterator } from './queue/consumerIterator.mjs'
 
 console.log(`Worker ${threadId} start!`)
 
-// Create consumer
-const consumer = new QueueConsumer({})
-await consumer.start()
+// Start consumer
+const schedulerStream = new ConsumerIterator()
+await schedulerStream.starter()
 
 // Consumer cycle
-for await (const task of consumer) {
+for await (const task of schedulerStream) {
   console.log({ threadId, task })
   await setTimeout(200)
+  await schedulerStream.puller()
 }
 
 console.log(`Worker ${threadId} done!`)
 
 // Signal end
-await consumer.close()
+await schedulerStream.ender()

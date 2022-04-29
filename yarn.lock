@@ -83,6 +83,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@samples/iterator2@workspace:samples/messageChannel/iterator_old":
+  version: 0.0.0-use.local
+  resolution: "@samples/iterator2@workspace:samples/messageChannel/iterator_old"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@samples/iterator@workspace:samples/messageChannel/iterator":
   version: 0.0.0-use.local
   resolution: "@samples/iterator@workspace:samples/messageChannel/iterator"

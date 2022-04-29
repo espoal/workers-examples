@@ -49,6 +49,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/messageChannel/iterator"\
       },\
       {\
+        "name": "@samples/iterator2",\
+        "reference": "workspace:samples/messageChannel/iterator_old"\
+      },\
+      {\
         "name": "@pkgs/messaggeChannel",\
         "reference": "workspace:samples/messageChannel/messageChannel"\
       },\
@@ -107,6 +111,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@samples/duplex", ["workspace:samples/messageChannel/duplex"]],\
       ["@samples/infiniteQueue", ["workspace:samples/messageChannel/writableQueue"]],\
       ["@samples/iterator", ["workspace:samples/messageChannel/iterator"]],\
+      ["@samples/iterator2", ["workspace:samples/messageChannel/iterator_old"]],\
       ["@samples/mc-readableQueue", ["workspace:samples/messageChannel/readableQueue"]],\
       ["@samples/pm-readableQueue", ["workspace:samples/postMessage/readableQueue"]],\
       ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
@@ -232,6 +237,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./samples/messageChannel/iterator/",\
           "packageDependencies": [\
             ["@samples/iterator", "workspace:samples/messageChannel/iterator"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/iterator2", [\
+        ["workspace:samples/messageChannel/iterator_old", {\
+          "packageLocation": "./samples/messageChannel/iterator_old/",\
+          "packageDependencies": [\
+            ["@samples/iterator2", "workspace:samples/messageChannel/iterator_old"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

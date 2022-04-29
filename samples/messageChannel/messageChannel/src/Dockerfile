@@ -20,4 +20,4 @@ RUN yarn
 
 
 # Run the web service on container startup.
-CMD [ "node", "main.mjs" ]
+CMD [ "node", "scheduler.mjs" ]
