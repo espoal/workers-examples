@@ -61,6 +61,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:samples/messageChannel/readableQueue"\
       },\
       {\
+        "name": "@samples/sharedMap",\
+        "reference": "workspace:samples/messageChannel/sharedMap"\
+      },\
+      {\
         "name": "@samples/transformQueue",\
         "reference": "workspace:samples/messageChannel/transformQueue"\
       },\
@@ -117,6 +121,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
       ["@samples/queue", ["workspace:samples/streams/queue"]],\
       ["@samples/sharedArray", ["workspace:samples/streams/sharedArray"]],\
+      ["@samples/sharedMap", ["workspace:samples/messageChannel/sharedMap"]],\
       ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
       ["@samples/transformQueue", ["workspace:samples/messageChannel/transformQueue"]],\
       ["workers-examples", ["workspace:."]]\
@@ -297,6 +302,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./samples/streams/sharedArray/",\
           "packageDependencies": [\
             ["@samples/sharedArray", "workspace:samples/streams/sharedArray"],\
+            ["@libs/utils", "workspace:libs/utils"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@samples/sharedMap", [\
+        ["workspace:samples/messageChannel/sharedMap", {\
+          "packageLocation": "./samples/messageChannel/sharedMap/",\
+          "packageDependencies": [\
+            ["@samples/sharedMap", "workspace:samples/messageChannel/sharedMap"],\
             ["@libs/utils", "workspace:libs/utils"]\
           ],\
           "linkType": "SOFT"\

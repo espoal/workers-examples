@@ -139,6 +139,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@samples/sharedMap@workspace:samples/messageChannel/sharedMap":
+  version: 0.0.0-use.local
+  resolution: "@samples/sharedMap@workspace:samples/messageChannel/sharedMap"
+  dependencies:
+    "@libs/utils": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "@samples/streamQueue@workspace:samples/streams/streamQueue":
   version: 0.0.0-use.local
   resolution: "@samples/streamQueue@workspace:samples/streams/streamQueue"
