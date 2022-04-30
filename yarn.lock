@@ -385,6 +385,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"importWorker@workspace:samples/basic/importWorker":
+  version: 0.0.0-use.local
+  resolution: "importWorker@workspace:samples/basic/importWorker"
+  dependencies:
+    "@libs/build": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "tslib@npm:^1.13.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"

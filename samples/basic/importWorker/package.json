@@ -1,0 +1,11 @@
+{
+  "name": "importWorker",
+  "packageManager": "yarn@3.2.0",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node --experimental-import-meta-resolve dist/scheduler.mjs"
+  },
+  "dependencies": {
+    "@libs/build": "workspace:^"
+  }
+}

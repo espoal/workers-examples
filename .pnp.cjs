@@ -29,6 +29,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:libs/utils"\
       },\
       {\
+        "name": "importWorker",\
+        "reference": "workspace:samples/basic/importWorker"\
+      },\
+      {\
         "name": "@pkgs/workerData",\
         "reference": "workspace:samples/basic/workerData"\
       },\
@@ -124,6 +128,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@samples/sharedMap", ["workspace:samples/messageChannel/sharedMap"]],\
       ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
       ["@samples/transformQueue", ["workspace:samples/messageChannel/transformQueue"]],\
+      ["importWorker", ["workspace:samples/basic/importWorker"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -567,6 +572,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["esbuild-windows-arm64", "npm:0.14.38"]\
           ],\
           "linkType": "HARD"\
+        }]\
+      ]],\
+      ["importWorker", [\
+        ["workspace:samples/basic/importWorker", {\
+          "packageLocation": "./samples/basic/importWorker/",\
+          "packageDependencies": [\
+            ["importWorker", "workspace:samples/basic/importWorker"],\
+            ["@libs/build", "workspace:libs/build"]\
+          ],\
+          "linkType": "SOFT"\
         }]\
       ]],\
       ["tslib", [\
