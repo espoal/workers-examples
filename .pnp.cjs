@@ -29,80 +29,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:libs/utils"\
       },\
       {\
-        "name": "importWorker",\
-        "reference": "workspace:samples/basic/importWorker"\
-      },\
-      {\
-        "name": "@pkgs/workerData",\
-        "reference": "workspace:samples/basic/workerData"\
-      },\
-      {\
-        "name": "@pkgs/bcQueue",\
-        "reference": "workspace:samples/broadcastChannel/bcQueue"\
-      },\
-      {\
-        "name": "@pkgs/broadcastChannel",\
-        "reference": "workspace:samples/broadcastChannel/broadcastChannel"\
-      },\
-      {\
-        "name": "@samples/duplex",\
-        "reference": "workspace:samples/messageChannel/duplex"\
-      },\
-      {\
-        "name": "@samples/iterator",\
-        "reference": "workspace:samples/messageChannel/iterator"\
-      },\
-      {\
-        "name": "@samples/iterator2",\
-        "reference": "workspace:samples/messageChannel/iterator_old"\
-      },\
-      {\
-        "name": "@pkgs/messaggeChannel",\
-        "reference": "workspace:samples/messageChannel/messageChannel"\
-      },\
-      {\
-        "name": "@samples/mc-readableQueue",\
-        "reference": "workspace:samples/messageChannel/readableQueue"\
-      },\
-      {\
         "name": "@samples/sharedMap",\
-        "reference": "workspace:samples/messageChannel/sharedMap"\
-      },\
-      {\
-        "name": "@samples/transformQueue",\
-        "reference": "workspace:samples/messageChannel/transformQueue"\
-      },\
-      {\
-        "name": "@samples/infiniteQueue",\
-        "reference": "workspace:samples/messageChannel/writableQueue"\
-      },\
-      {\
-        "name": "@pkgs/awaitResponse",\
-        "reference": "workspace:samples/postMessage/awaitResponse"\
-      },\
-      {\
-        "name": "@samples/postQueue",\
-        "reference": "workspace:samples/postMessage/postQueue"\
-      },\
-      {\
-        "name": "@samples/pm-readableQueue",\
-        "reference": "workspace:samples/postMessage/readableQueue"\
-      },\
-      {\
-        "name": "@samples/queue",\
-        "reference": "workspace:samples/streams/queue"\
-      },\
-      {\
-        "name": "@samples/sharedArray",\
-        "reference": "workspace:samples/streams/sharedArray"\
-      },\
-      {\
-        "name": "@samples/streamQueue",\
-        "reference": "workspace:samples/streams/streamQueue"\
-      },\
-      {\
-        "name": "@pkgs/webStreams",\
-        "reference": "workspace:samples/streams/webStreams"\
+        "reference": "workspace:samples/advanced/sharedMap"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -110,25 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@libs/build", ["workspace:libs/build"]],\
       ["@libs/utils", ["workspace:libs/utils"]],\
-      ["@pkgs/awaitResponse", ["workspace:samples/postMessage/awaitResponse"]],\
-      ["@pkgs/bcQueue", ["workspace:samples/broadcastChannel/bcQueue"]],\
-      ["@pkgs/broadcastChannel", ["workspace:samples/broadcastChannel/broadcastChannel"]],\
-      ["@pkgs/messaggeChannel", ["workspace:samples/messageChannel/messageChannel"]],\
-      ["@pkgs/webStreams", ["workspace:samples/streams/webStreams"]],\
-      ["@pkgs/workerData", ["workspace:samples/basic/workerData"]],\
-      ["@samples/duplex", ["workspace:samples/messageChannel/duplex"]],\
-      ["@samples/infiniteQueue", ["workspace:samples/messageChannel/writableQueue"]],\
-      ["@samples/iterator", ["workspace:samples/messageChannel/iterator"]],\
-      ["@samples/iterator2", ["workspace:samples/messageChannel/iterator_old"]],\
-      ["@samples/mc-readableQueue", ["workspace:samples/messageChannel/readableQueue"]],\
-      ["@samples/pm-readableQueue", ["workspace:samples/postMessage/readableQueue"]],\
-      ["@samples/postQueue", ["workspace:samples/postMessage/postQueue"]],\
-      ["@samples/queue", ["workspace:samples/streams/queue"]],\
-      ["@samples/sharedArray", ["workspace:samples/streams/sharedArray"]],\
-      ["@samples/sharedMap", ["workspace:samples/messageChannel/sharedMap"]],\
-      ["@samples/streamQueue", ["workspace:samples/streams/streamQueue"]],\
-      ["@samples/transformQueue", ["workspace:samples/messageChannel/transformQueue"]],\
-      ["importWorker", ["workspace:samples/basic/importWorker"]],\
+      ["@samples/sharedMap", ["workspace:samples/advanced/sharedMap"]],\
       ["workers-examples", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -162,182 +72,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
-      ["@pkgs/awaitResponse", [\
-        ["workspace:samples/postMessage/awaitResponse", {\
-          "packageLocation": "./samples/postMessage/awaitResponse/",\
-          "packageDependencies": [\
-            ["@pkgs/awaitResponse", "workspace:samples/postMessage/awaitResponse"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@pkgs/bcQueue", [\
-        ["workspace:samples/broadcastChannel/bcQueue", {\
-          "packageLocation": "./samples/broadcastChannel/bcQueue/",\
-          "packageDependencies": [\
-            ["@pkgs/bcQueue", "workspace:samples/broadcastChannel/bcQueue"],\
-            ["@libs/build", "workspace:libs/build"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@pkgs/broadcastChannel", [\
-        ["workspace:samples/broadcastChannel/broadcastChannel", {\
-          "packageLocation": "./samples/broadcastChannel/broadcastChannel/",\
-          "packageDependencies": [\
-            ["@pkgs/broadcastChannel", "workspace:samples/broadcastChannel/broadcastChannel"],\
-            ["@libs/build", "workspace:libs/build"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@pkgs/messaggeChannel", [\
-        ["workspace:samples/messageChannel/messageChannel", {\
-          "packageLocation": "./samples/messageChannel/messageChannel/",\
-          "packageDependencies": [\
-            ["@pkgs/messaggeChannel", "workspace:samples/messageChannel/messageChannel"],\
-            ["@libs/build", "workspace:libs/build"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@pkgs/webStreams", [\
-        ["workspace:samples/streams/webStreams", {\
-          "packageLocation": "./samples/streams/webStreams/",\
-          "packageDependencies": [\
-            ["@pkgs/webStreams", "workspace:samples/streams/webStreams"],\
-            ["@libs/build", "workspace:libs/build"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@pkgs/workerData", [\
-        ["workspace:samples/basic/workerData", {\
-          "packageLocation": "./samples/basic/workerData/",\
-          "packageDependencies": [\
-            ["@pkgs/workerData", "workspace:samples/basic/workerData"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/duplex", [\
-        ["workspace:samples/messageChannel/duplex", {\
-          "packageLocation": "./samples/messageChannel/duplex/",\
-          "packageDependencies": [\
-            ["@samples/duplex", "workspace:samples/messageChannel/duplex"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/infiniteQueue", [\
-        ["workspace:samples/messageChannel/writableQueue", {\
-          "packageLocation": "./samples/messageChannel/writableQueue/",\
-          "packageDependencies": [\
-            ["@samples/infiniteQueue", "workspace:samples/messageChannel/writableQueue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/iterator", [\
-        ["workspace:samples/messageChannel/iterator", {\
-          "packageLocation": "./samples/messageChannel/iterator/",\
-          "packageDependencies": [\
-            ["@samples/iterator", "workspace:samples/messageChannel/iterator"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/iterator2", [\
-        ["workspace:samples/messageChannel/iterator_old", {\
-          "packageLocation": "./samples/messageChannel/iterator_old/",\
-          "packageDependencies": [\
-            ["@samples/iterator2", "workspace:samples/messageChannel/iterator_old"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/mc-readableQueue", [\
-        ["workspace:samples/messageChannel/readableQueue", {\
-          "packageLocation": "./samples/messageChannel/readableQueue/",\
-          "packageDependencies": [\
-            ["@samples/mc-readableQueue", "workspace:samples/messageChannel/readableQueue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/pm-readableQueue", [\
-        ["workspace:samples/postMessage/readableQueue", {\
-          "packageLocation": "./samples/postMessage/readableQueue/",\
-          "packageDependencies": [\
-            ["@samples/pm-readableQueue", "workspace:samples/postMessage/readableQueue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/postQueue", [\
-        ["workspace:samples/postMessage/postQueue", {\
-          "packageLocation": "./samples/postMessage/postQueue/",\
-          "packageDependencies": [\
-            ["@samples/postQueue", "workspace:samples/postMessage/postQueue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/queue", [\
-        ["workspace:samples/streams/queue", {\
-          "packageLocation": "./samples/streams/queue/",\
-          "packageDependencies": [\
-            ["@samples/queue", "workspace:samples/streams/queue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/sharedArray", [\
-        ["workspace:samples/streams/sharedArray", {\
-          "packageLocation": "./samples/streams/sharedArray/",\
-          "packageDependencies": [\
-            ["@samples/sharedArray", "workspace:samples/streams/sharedArray"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["@samples/sharedMap", [\
-        ["workspace:samples/messageChannel/sharedMap", {\
-          "packageLocation": "./samples/messageChannel/sharedMap/",\
+        ["workspace:samples/advanced/sharedMap", {\
+          "packageLocation": "./samples/advanced/sharedMap/",\
           "packageDependencies": [\
-            ["@samples/sharedMap", "workspace:samples/messageChannel/sharedMap"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/streamQueue", [\
-        ["workspace:samples/streams/streamQueue", {\
-          "packageLocation": "./samples/streams/streamQueue/",\
-          "packageDependencies": [\
-            ["@samples/streamQueue", "workspace:samples/streams/streamQueue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@samples/transformQueue", [\
-        ["workspace:samples/messageChannel/transformQueue", {\
-          "packageLocation": "./samples/messageChannel/transformQueue/",\
-          "packageDependencies": [\
-            ["@samples/transformQueue", "workspace:samples/messageChannel/transformQueue"],\
-            ["@libs/utils", "workspace:libs/utils"]\
+            ["@samples/sharedMap", "workspace:samples/advanced/sharedMap"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -572,16 +311,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["esbuild-windows-arm64", "npm:0.14.38"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["importWorker", [\
-        ["workspace:samples/basic/importWorker", {\
-          "packageLocation": "./samples/basic/importWorker/",\
-          "packageDependencies": [\
-            ["importWorker", "workspace:samples/basic/importWorker"],\
-            ["@libs/build", "workspace:libs/build"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["tslib", [\

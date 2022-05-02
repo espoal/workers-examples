@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@libs/build@workspace:^, @libs/build@workspace:libs/build":
+"@libs/build@workspace:libs/build":
   version: 0.0.0-use.local
   resolution: "@libs/build@workspace:libs/build"
   dependencies:
@@ -14,152 +14,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@libs/utils@workspace:^, @libs/utils@workspace:libs/utils":
+"@libs/utils@workspace:libs/utils":
   version: 0.0.0-use.local
   resolution: "@libs/utils@workspace:libs/utils"
   languageName: unknown
   linkType: soft
 
-"@pkgs/awaitResponse@workspace:samples/postMessage/awaitResponse":
+"@samples/sharedMap@workspace:samples/advanced/sharedMap":
   version: 0.0.0-use.local
-  resolution: "@pkgs/awaitResponse@workspace:samples/postMessage/awaitResponse"
-  languageName: unknown
-  linkType: soft
-
-"@pkgs/bcQueue@workspace:samples/broadcastChannel/bcQueue":
-  version: 0.0.0-use.local
-  resolution: "@pkgs/bcQueue@workspace:samples/broadcastChannel/bcQueue"
-  dependencies:
-    "@libs/build": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@pkgs/broadcastChannel@workspace:samples/broadcastChannel/broadcastChannel":
-  version: 0.0.0-use.local
-  resolution: "@pkgs/broadcastChannel@workspace:samples/broadcastChannel/broadcastChannel"
-  dependencies:
-    "@libs/build": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@pkgs/messaggeChannel@workspace:samples/messageChannel/messageChannel":
-  version: 0.0.0-use.local
-  resolution: "@pkgs/messaggeChannel@workspace:samples/messageChannel/messageChannel"
-  dependencies:
-    "@libs/build": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@pkgs/webStreams@workspace:samples/streams/webStreams":
-  version: 0.0.0-use.local
-  resolution: "@pkgs/webStreams@workspace:samples/streams/webStreams"
-  dependencies:
-    "@libs/build": "workspace:^"
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@pkgs/workerData@workspace:samples/basic/workerData":
-  version: 0.0.0-use.local
-  resolution: "@pkgs/workerData@workspace:samples/basic/workerData"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/duplex@workspace:samples/messageChannel/duplex":
-  version: 0.0.0-use.local
-  resolution: "@samples/duplex@workspace:samples/messageChannel/duplex"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue":
-  version: 0.0.0-use.local
-  resolution: "@samples/infiniteQueue@workspace:samples/messageChannel/writableQueue"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/iterator2@workspace:samples/messageChannel/iterator_old":
-  version: 0.0.0-use.local
-  resolution: "@samples/iterator2@workspace:samples/messageChannel/iterator_old"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/iterator@workspace:samples/messageChannel/iterator":
-  version: 0.0.0-use.local
-  resolution: "@samples/iterator@workspace:samples/messageChannel/iterator"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/mc-readableQueue@workspace:samples/messageChannel/readableQueue":
-  version: 0.0.0-use.local
-  resolution: "@samples/mc-readableQueue@workspace:samples/messageChannel/readableQueue"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/pm-readableQueue@workspace:samples/postMessage/readableQueue":
-  version: 0.0.0-use.local
-  resolution: "@samples/pm-readableQueue@workspace:samples/postMessage/readableQueue"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/postQueue@workspace:samples/postMessage/postQueue":
-  version: 0.0.0-use.local
-  resolution: "@samples/postQueue@workspace:samples/postMessage/postQueue"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/queue@workspace:samples/streams/queue":
-  version: 0.0.0-use.local
-  resolution: "@samples/queue@workspace:samples/streams/queue"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/sharedArray@workspace:samples/streams/sharedArray":
-  version: 0.0.0-use.local
-  resolution: "@samples/sharedArray@workspace:samples/streams/sharedArray"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/sharedMap@workspace:samples/messageChannel/sharedMap":
-  version: 0.0.0-use.local
-  resolution: "@samples/sharedMap@workspace:samples/messageChannel/sharedMap"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/streamQueue@workspace:samples/streams/streamQueue":
-  version: 0.0.0-use.local
-  resolution: "@samples/streamQueue@workspace:samples/streams/streamQueue"
-  dependencies:
-    "@libs/utils": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@samples/transformQueue@workspace:samples/messageChannel/transformQueue":
-  version: 0.0.0-use.local
-  resolution: "@samples/transformQueue@workspace:samples/messageChannel/transformQueue"
-  dependencies:
-    "@libs/utils": "workspace:^"
+  resolution: "@samples/sharedMap@workspace:samples/advanced/sharedMap"
   languageName: unknown
   linkType: soft
 
@@ -384,14 +247,6 @@ __metadata:
   checksum: d7523a36bd28016c010829c527386dbc0c6b9f514920abf5ac8003f346665161aa61026fd6822c5091fc1c1af52fe26c9281a81740fc06f2994cdbb7c2880297
   languageName: node
   linkType: hard
-
-"importWorker@workspace:samples/basic/importWorker":
-  version: 0.0.0-use.local
-  resolution: "importWorker@workspace:samples/basic/importWorker"
-  dependencies:
-    "@libs/build": "workspace:^"
-  languageName: unknown
-  linkType: soft
 
 "tslib@npm:^1.13.0":
   version: 1.14.1
